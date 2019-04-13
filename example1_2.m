@@ -1,3 +1,4 @@
+% run example1_1.m first
 syms x
 Px = poly2sym(num,x)/poly2sym(den,x);                               %symbolic transfer function with variable x
 syms kpx kdx
