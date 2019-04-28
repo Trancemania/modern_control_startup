@@ -9,6 +9,6 @@ Ps = subs(solve(uy, y),u,1);            %symbolic transfer function
 num = sym2poly(symnum);                 
 den = sym2poly(symden);                 %matrix format
 
-%tf = tf(num,den);                      %transfer function
+tf = tf(num,den);                      %transfer function
 %num = cell2mat(tf.numerator(1,1));     
 %den = cell2mat(tf.denominator(1,1));   %cell to matrix

@@ -7,3 +7,8 @@ Ts2 = subs(solve(close_loop2, y),yref,1);                           %transfer fu
 [symnum2,symden2] = numden(Ts2);                                    %extract num den
 num2 = coeffs(symnum2, s, 'All');                                   
 den2 = coeffs(symden2, s, 'All');                                   %coefficients of s
+
+ss_Ps = ss(tf);
+
+k = [-1.9, -1.71, -5.84, -4.45];
+h = 7.75;
