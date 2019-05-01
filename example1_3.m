@@ -8,11 +8,13 @@ Ts2 = subs(solve(close_loop2, y),yref,1);                           %transfer fu
 num2 = coeffs(symnum2, s, 'All');                                   
 den2 = coeffs(symden2, s, 'All');                                   %coefficients of s
 
-ss_Ps = ss(tf);
-
-k = [-1.9, -1.71, -5.84, -4.45];
+ss_Ps = ss(tf);                                                     %derive A,B,C matrix for simulation
+                                                                    %WARNING:ss_Ps is not suitable for
+                                                                    %simulation 1_3 since states change,
+                                                                 
+k = [-1.9, -1.71, -5.84, -4.45];                                    %controller gains from book
 h = 7.75;
 
-A = [0 1 0 0;-4 -2 4 2;0 0 0 1;2 1 -2 -1];
+A = [0 1 0 0;-4 -2 4 2;0 0 0 1;2 1 -2 -1];                          %A,B,C matrix by input
 B = [0;2;0;0];
 C = [0,0,1,0];
