@@ -1,5 +1,5 @@
 % run example1_1.m first
-syms kpp kdd
+syms kpp kdd yref
 eq3 = y == Ps*kpp*(yref-y)+kdd*s*(yref-y);
 tf_pd = subs(solve(eq3, y),yref,1);
 [sym_pd_num,sym_pd_den] = numden(tf_pd);
