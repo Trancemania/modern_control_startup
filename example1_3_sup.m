@@ -21,4 +21,4 @@ x_vf = F_vf(Yvar,u);
 mat_A = double(equationsToMatrix(x_vf ==0, TrM*Yvar));
 mat_B = double(equationsToMatrix(x_vf ==0, u));
 
-mat_C = [0 0 1 0];
+mat_C = [0 0 1 0];                                                  %use new syms and equationsToMatrix when complicated 
