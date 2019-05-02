@@ -1,3 +1,4 @@
+% run example1_1.m first
 syms kpp kdd
 eq3 = y == Ps*kpp*(yref-y)+kdd*s*(yref-y);
 tf_pd = subs(solve(eq3, y),yref,1);
